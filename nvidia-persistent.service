@@ -1,0 +1,11 @@
+[Unit]
+Description=NVIDIA driver persistence daemon
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/nvidia-persistenced
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
